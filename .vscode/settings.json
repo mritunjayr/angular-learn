@@ -4,5 +4,8 @@
         "**/.project": true,
         "**/.settings": true,
         "**/.factorypath": true
-    }
+    },
+    "editor.fontFamily": "Operator Mono,Source Code Pro,'Fira code Retina',monospace",
+    "editor.codeLensFontFamily": "'Fira code Retina',monospace",
+    "editor.fontLigatures": true
 }
