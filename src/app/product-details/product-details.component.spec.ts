@@ -6,27 +6,32 @@ import { ProductListComponent } from "../product-list/product-list.component";
 import { ShippingComponent } from "../shipping/shipping.component";
 import { HttpClientTestingModule } from "@angular/common/http/testing";
 import { AppRoutingModule } from "../app-routing.module";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { BrowserModule } from "@angular/platform-browser";
+import { ReactiveFormsModule } from "@angular/forms";
 import { ProductAlertsComponent } from "../product-alerts/product-alerts.component";
 
 describe("ProductDetailsComponent", () => {
   let component: ProductDetailsComponent;
   let fixture: ComponentFixture<ProductDetailsComponent>;
 
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      declarations: [
-        ProductDetailsComponent,
-        CartComponent,
-        ProductListComponent,
-        ProductDetailsComponent,
-        ShippingComponent,
-        ProductAlertsComponent
-      ],
-      imports: [HttpClientTestingModule, AppRoutingModule, ReactiveFormsModule]
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [
+          ProductDetailsComponent,
+          CartComponent,
+          ProductListComponent,
+          ProductDetailsComponent,
+          ShippingComponent,
+          ProductAlertsComponent,
+        ],
+        imports: [
+          HttpClientTestingModule,
+          AppRoutingModule,
+          ReactiveFormsModule,
+        ],
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ProductDetailsComponent);
