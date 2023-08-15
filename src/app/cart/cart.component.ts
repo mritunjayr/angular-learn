@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { UntypedFormBuilder } from '@angular/forms';
 import { CartService } from '../cart.service';
 
 
@@ -12,7 +12,7 @@ export class CartComponent implements OnInit {
   items;
   checkoutForm;
   constructor(private cartService: CartService,
-    private formBuilder: FormBuilder,
+    private formBuilder: UntypedFormBuilder,
   ) {
     this.items = this.cartService.getItems();
     this.checkoutForm = this.formBuilder.group({
